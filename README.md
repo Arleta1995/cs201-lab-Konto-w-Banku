@@ -52,7 +52,7 @@ Przed rozpoczęciem ćwiczenia zapoznaj się opracowaniem [Unit test basics](htt
 
 9. Opracuj metodę `void Wyplata(decimal kwota)`, która zmniejsza stan środków konta. Rozważ różne sytuacje, zgłaszając wyjątki. Pamiętaj, że nie można dokonać wypłaty z konta, jeśli nie ma na nim odpowiedniej ilości środków.
 
-10. Napisz metody `void BlokujKonto()` oraz `void OdblokujKonto()`, zmieniające stan pola `_zablokowane`.
+10. Napisz metody `void BlokujKonto()` oraz `void OdblokujKonto()`, zmieniające stan pola `zablokowane`.
 
 11. **Opracuj testy jednostkowe dla metod klasy `Konto`**.
 
