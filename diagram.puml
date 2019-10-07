@@ -1,0 +1,54 @@
+@startuml
+
+'' plantumlfile1
+'' skinparam handwritten true
+skinparam classAttributeIconSize -1
+set namespaceSeparator ::
+
+class Konto <<class>>
+{
+  - klient
+  - bilans
+  - zablokowane = false
+  + Bilans {get}
+  + Nazwa {get}
+  + Zablokowane {get}
+  + Konto( klient, bilansNaStart = 0)
+  + Wplata( kwota )
+  + Wyplata( kwota )
+  + BlokujKonto()
+  + OdblokujKonto()
+}
+
+class KontoPlus <<class>>
+{
+  - limit
+  + Limit {get; set}
+  + Bilans {get}
+  + KontoLimit( klient, bilansNaStart = 0, limit = 100)
+  + Wplata( kwota )
+  + Wyplata( kwota )
+  + OdblokujKonto()
+}
+
+Konto <|-- KontoPlus : dziedziczy
+
+class KontoLimit <<class>>
+{
+  - konto : Konto
+  - limit
+  + Bilans {get}
+  + Nazwa {get}
+  + Zablokowane {get}
+  + Limit {get; set}
+  + KontoPlus( klient, bilansNaStart = 0, limit = 100)
+  + Wplata( kwota )
+  + Wyplata( kwota )
+  + BlokujKonto()
+  + OdblokujKonto()  
+}
+
+Konto "1" *---- KontoLimit : zawiera
+Konto -[hidden] KontoLimit
+
+@enduml
