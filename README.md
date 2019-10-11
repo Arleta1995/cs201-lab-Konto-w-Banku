@@ -66,10 +66,10 @@ Przed rozpoczęciem ćwiczenia zapoznaj się opracowaniem [Unit test basics](htt
 
 1. Rozbuduj kod, wprowadzając następującą funkcjonalność - `KontoPlus`:
 
-    > "Jednorazowy limit debetowy", ustalany indywidualnie podczas tworzenia konta, z możliwością zmiany dla już istniejącego konta (zwiększenie lub zmniejszenie).
-    > Umożliwia on **jednorazowe** zrealizowanie wypłaty przekraczającej aktualny stan środków (tzw. debet), ale nie przekraczającej kwoty ustalonego "jednorazowego limitu debetowego".
-    > Po wykonaniu takiej transakcji konto zostaje zablokowane.
-    > Konto zostanie odblokowane po wykonaniu wpłaty (wpłat), które podniosą stan środków powyżej 0. Przywrócona zostanie wtedy również funkcjonalność "jednorazowego limitu debetowego".
+    > * "Jednorazowy limit debetowy", ustalany indywidualnie podczas tworzenia konta, z możliwością zmiany dla już istniejącego konta (zwiększenie lub zmniejszenie).
+    > * Umożliwia on **jednorazowe** zrealizowanie wypłaty przekraczającej aktualny stan środków (tzw. debet), ale nie przekraczającej kwoty ustalonego "jednorazowego limitu debetowego".
+    > * Po wykonaniu takiej transakcji konto zostaje zablokowane.
+    > * Konto zostanie odblokowane po wykonaniu wpłaty (wpłat), które podniosą stan środków powyżej `0`. Przywrócona zostanie wtedy również funkcjonalność "jednorazowego limitu debetowego".
 
 2. Zadanie to zrealizuj, tworząc klasę `KontoPlus`, dziedziczącą z klasy `Konto`.
 
